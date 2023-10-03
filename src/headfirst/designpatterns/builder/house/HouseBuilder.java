@@ -1,11 +1,9 @@
 package headfirst.designpatterns.builder.house;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class HouseBuilder {
 	String builderName;
-	enum HouseType {
+
+	public enum HouseType {
 		WOOD, CLAY, GINGERBREAD, STONE 
 	}
 	HouseType houseType;
@@ -15,7 +13,7 @@ public abstract class HouseBuilder {
 		this.houseType = houseType;
 		house.setHouseType(houseType);
 	}
-	// Each method in the Builder returns the Builder so we can use the Fluent Interface Pattern
+	// Each method in the Builder returns the Builder, so we can use the Fluent Interface Pattern
 	public abstract HouseBuilder addWalls();
 	public abstract HouseBuilder addRoof();
 	public abstract HouseBuilder addWindows();

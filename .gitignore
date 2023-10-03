@@ -1,3 +1,7 @@
+# Escludo i file di IntelliJ
 *.iml
 .idea
+# Esculdo le cartelle di build standard
 out
+# Esculdo le cartelle di build maven
+target
